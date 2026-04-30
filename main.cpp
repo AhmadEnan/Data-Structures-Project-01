@@ -1,13 +1,24 @@
+#include "LinkedList.h"
+#include <iostream>
+
 int main() {
-    // ===== Member 1 LinkedList demo ========================================
+    // ===== LinkedList Test ========================================
+    LinkedList list;
+    list.insertAtHead(10);
+    list.insertAtHead(20);
+    list.insertAtEnd(30);
+    std::cout << "Linked List after insertions: ";
+    list.display();
+    list.deleteValue(10);
+    std::cout << "Linked List after deleting 10: ";
+    list.display();
+    // ===== StackArray Test ========================================
 
-    // ===== Member 2 StackArray demo ========================================
+    // ===== StackLinkedList Test ===================================
 
-    // ===== Member 3 StackLinkedList demo ===================================
+    // ===== QueueArray Test ========================================
 
-    // ===== Member 4 QueueArray demo ========================================
-
-    // ===== Member 5 QueueLinkedList demo ===================================
+    // ===== QueueLinkedList Test ===================================
 
     return 0;
 }

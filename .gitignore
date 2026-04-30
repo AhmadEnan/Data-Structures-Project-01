@@ -198,6 +198,11 @@ AutoTest.Net/
 
 # DocProject is a documentation generator add-in
 DocProject/buildhelp/
+
+# C++ assignment build outputs
+dsa_test
+*.o
+*.out
 DocProject/Help/*.HxT
 DocProject/Help/*.HxC
 DocProject/Help/*.hhc
@@ -427,3 +432,7 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+*.codex
+Makefile
+CMakeLists.txt

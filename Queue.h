@@ -19,6 +19,7 @@ public:
     int dequeue();
     bool isFull() const;
     bool isEmpty() const;
+    void display() const;
 };
 
 class QueueLinkedList {

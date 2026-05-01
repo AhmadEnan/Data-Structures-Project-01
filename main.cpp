@@ -1,6 +1,7 @@
 #include "LinkedList.h"
 #include <iostream>
-
+#include "Queue.h"
+using namespace std;
 int main() {
     // ===== LinkedList Test ========================================
     LinkedList list;
@@ -19,6 +20,16 @@ int main() {
     // ===== QueueArray Test ========================================
 
     // ===== QueueLinkedList Test ===================================
+QueueLinkedList q;
 
-    return 0;
+q.enqueue(5);
+q.enqueue(30);
+q.enqueue(1);
+cout << "Queue content: ";
+q.display();
+cout << "Dequeue 1: " << q.dequeue() << endl; // Should print 5
+cout << "Dequeue 2: " << q.dequeue() << endl; // Should print 30
+cout << "Dequeue 3: " << q.dequeue() << endl; // Should print 1
+cout << "Dequeue from empty queue: " << q.dequeue() << endl; // Should print -1
+
 }

@@ -24,17 +24,17 @@ public:
 
 class QueueLinkedList {
 private:
-    Node* front;
-    Node* rear;
+    Node* front; //points to first element to be dequeued
+    Node* rear; //points to last element in the queue
 
 public:
     QueueLinkedList();
     ~QueueLinkedList();
 
-    void enqueue(int value);
-    int dequeue();
-    bool isFull() const;
-    bool isEmpty() const;
-};
-
+    void enqueue(int value); // Add an element to the rear of the queue
+    int dequeue(); // Remove and return the element at the front of the queue. If the queue is empty, return -1 .
+    bool isEmpty() const; // Check if the queue is empty
+     
+    void display() const; //print all elements in the queue from front to rear. 
 #endif
+};

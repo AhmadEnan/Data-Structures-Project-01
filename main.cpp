@@ -1,4 +1,5 @@
 #include "LinkedList.h"
+#include "Stack.h"
 #include <iostream>
 
 int main() {
@@ -13,6 +14,15 @@ int main() {
     std::cout << "Linked List after deleting 10: ";
     list.display();
     // ===== StackArray Test ========================================
+    std::cout << "\n--- StackArray Test ---\n";
+    StackArray stackArr(5);
+    stackArr.push(10);
+    stackArr.push(20);
+    stackArr.push(30);
+    std::cout << "Pushed 10, 20, 30.\n";
+    std::cout << "Top element (peek): " << stackArr.peek() << "\n";
+    std::cout << "Popped element: " << stackArr.pop() << "\n";
+    std::cout << "Is stack empty? " << (stackArr.isEmpty() ? "Yes" : "No") << "\n";
 
     // ===== StackLinkedList Test ===================================
 

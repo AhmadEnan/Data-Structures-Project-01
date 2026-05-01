@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Queue.h"
 
+
 int main() {
     // ===== LinkedList Test ========================================
     LinkedList list;
@@ -26,6 +27,29 @@ int main() {
     std::cout << "Is stack empty? " << (stackArr.isEmpty() ? "Yes" : "No") << "\n";
 
     // ===== StackLinkedList Test ===================================
+StackLinkedList stack;
+std::cout << "\n--- StackLinkedList Test ---\n";
+std::cout << "Is  LL stack empty? " << stack.isEmpty() << std::endl;
+
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+std::cout << "Top after pushing 10, 20, 30: " << stack.peek() << std::endl;
+
+std::cout << "Popped value: " << stack.pop() << std::endl;
+
+std::cout << "Top after popping: " << stack.peek() << std::endl;
+
+stack.push(40);
+
+std::cout << "Top after pushing 40: " << stack.peek() << std::endl;
+
+std::cout << "Stack values from top to bottom: ";
+while (!stack.isEmpty()) {
+    std::cout << stack.pop() << " ";
+}
+std::cout << std::endl<<"\n";
 
     // ===== QueueArray Test ========================================
     QueueArray queue(5);
@@ -43,11 +67,12 @@ QueueLinkedList q;
 q.enqueue(5);
 q.enqueue(30);
 q.enqueue(1);
-cout << "Queue content: ";
+std::cout << "Queue content: ";
 q.display();
-std::cout << "Dequeue 1: " << q.dequeue() << endl; // Should print 5
-std::cout << "Dequeue 2: " << q.dequeue() << endl; // Should print 30
-std::cout << "Dequeue 3: " << q.dequeue() << endl; // Should print 1
-std::cout << "Dequeue from empty queue: " << q.dequeue() << endl; // Should print -1
+std::cout << "Dequeue 1: " << q.dequeue() << std::endl; // Should print 5
+std::cout << "Dequeue 2: " << q.dequeue() << std::endl; // Should print 30
+std::cout << "Dequeue 3: " << q.dequeue() << std::endl; // Should print 1
+std::cout << "Dequeue from empty queue: " << q.dequeue() << std::endl; // Should print -1
 
+return 0;
 }
